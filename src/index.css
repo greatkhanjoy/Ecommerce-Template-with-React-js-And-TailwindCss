@@ -1,13 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lato', sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Lato', sans-serif;
+}
+
+.mobile-menu {
+  left:100%;
+  transition: 0.4s;
+}
+.mobile-menu.openMenu{
+  left:0;
+}
+
+.slick-next {
+  -left: 100%;
+  transition: 0.4s;
+}
+
+.slick-prev {
+  right: 100%;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+.slick-prev::before, .slick-next::before {
+font-size: 45px;
+transition: 0.4s;
+}
+
+.slick-slider:hover .slick-prev::before, .slick-slider:hover .slick-next::before{
+  opacity: 1;
+  color: rgb(189, 216, 218);
+}
+
+.slick-slider:hover .slick-prev{
+  left: 5%;
+  transition: 0.4s;
+}
+.slick-slider:hover .slick-next{
+  right: 5%;
+  transition: 0.4s;
+}
+
+.zoom{
+  transition: transform .4s;
+  cursor: pointer;
+}
+.zoom:hover {
+  transform: scale(1.05); 
+}
+.promo-text{
+  cursor: pointer;
+}
+
+.product-buttons{
+  right:-100%;
+  transition: 0.2s;
+}
+.product-image:hover .product-buttons{
+  right:10px;
 }
